@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+    arm64:
+        platform: linux/arm64v8
+        build:
+            context: .
+            dockerfile: Dockerfile.arm64
+        image: 'arm64/arm64:latest'
+        command: bash
+        volumes:
+            - ./persistent/:/persistent/
